@@ -7,13 +7,66 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src='script.js' defer></script>
 	<title>Lab 04</title>
-	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+	<style>
+
+		.divcard {
+			position: relative;
+		}
+
+		.divbtn {
+			display: none;
+		}
+
+		.divcard:hover .divbtn {
+			display: block;
+		}
+
+	</style>
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-	<h1>Minimal Todo List</h1>
-	<input  type='text'>
-	<button>+</button>
+<body class="bg-black">
+
+
+	<div
+		class="flex justify-center items-center border-b-8 text-7xl py-5 pt-14 text-white max-w-4xl mx-auto border-white">
+		Minimal Todo List
+	</div>
+	<!-- <input type='text'>
+	<button onclick='clickcallback()'>+</button> -->
+
+	<div class="py-10 px-2">
+		<div class="max-w-xl mx-auto overflow-hidden">
+
+			<div class="relative">
+				<input id="taskfield" type="text" class="bg-white h-14 w-full px-4  rounded-2xl">
+				<button id="addbutton"
+					class="h-10 rounded-xl bg-gray-800 absolute top-2 text-sm right-2 px-3 text-white ">
+					Add Task
+				</button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="flex justify-center items-center underline text-2xl text-white max-w-4xl mx-auto font-bold">
+		Todo Task
+	</div>
+
+	<div id="currentlist" class=" text-white max-w-4xl mx-auto pb-10 pt-4 ">
+
+	</div>
+
+	<div class="flex justify-center items-center underline text-2xl text-white max-w-4xl mx-auto font-bold">
+		Done Task
+	</div>
+
+	<div id="donelist" class=" text-white max-w-4xl mx-auto pb-10 pt-4 ">
+
+	</div>
+
+
 </body>
 
 </html>
